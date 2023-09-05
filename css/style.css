@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --first: "Fraunces";
+  --second: "Montserrat";
+  --paragraph: 13px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: var(--Cream);
+}
+
+.container {
+  height: 25.5rem;
+  width: 34rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 0.5rem;
+}
+
+.first img {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.second {
+  background: var(--White);
+  display: grid;
+  grid-template-columns: 80%;
+  justify-content: center;
+  align-content: space-evenly;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 1rem 0;
+}
+
+.title {
+  font-family: var(--second);
+  color: var(--Dark-grayish-blue);
+  font-size: 0.65rem;
+  letter-spacing: 0.3rem;
+}
+
+h1 {
+  font-family: "Fraunces";
+  line-height: 1.85rem;
+  color: var(--Very-dark-blue);
+  font-size: 1.85rem;
+}
+
+.para {
+  font-family: var(--second);
+  font-size: var(--paragraph);
+  color: var(--Dark-grayish-blue);
+  line-height: 1.3rem;
+}
+
+.price {
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr;
+  justify-content: space-between;
+}
+
+.price > p:first-child {
+  font-family: var(--first);
+  font-size: 1.75rem;
+  color: var(--Dark-cyan);
+}
+
+.price > p:last-child {
+  display: grid;
+  align-content: center;
+  font-family: var(--second);
+  font-size: 0.75rem;
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: auto auto;
+  place-content: center;
+  gap: 0.5rem;
+  background: var(--Dark-cyan);
+  color: var(--White);
+  font-family: var(--second);
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.85rem;
+}
+
+@media (width < 577px) {
+  .container {
+    height: 95vh;
+    display: grid;
+    grid-template-columns: 21.25rem;
+    grid-template-rows: 2fr 4fr;
+    place-content: center;
+  }
+  .first > img {
+    height: 14rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    border-radius: 0.5rem 0.5rem 0 0;
+    -webkit-border-radius: 0.5rem 0.5rem 0 0;
+    -moz-border-radius: 0.5rem 0.5rem 0 0;
+    -ms-border-radius: 0.5rem 0.5rem 0 0;
+    -o-border-radius: 0.5rem 0.5rem 0 0;
+  }
+}/*# sourceMappingURL=style.css.map */
